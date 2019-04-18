@@ -1,0 +1,27 @@
+#main{
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+#info{
+    width: 400px;
+    margin-left: 400px;
+}
+
+#ablesen{
+    margin-top: 100px;
+}
+
+#tabelle{
+    width:430px;
+    float: left;
+}
+
+#formID{
+    margin-left: 70px;
+    margin-top: 18px;
+    width: 300px;
+    float: left;
+}

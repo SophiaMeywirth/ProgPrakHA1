@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Javascript for random number and KhW entry feature -->
+    <script>
+
+        //do a entry (idea from http://www.perl-community.de/bat/poard/thread/16658 )
+        function submitEintrag() {
+            //get values from user input
+            var todo = document.getElementById("ToDo").value;
+            var deadline = document.getElementById("Deadline").value;
+            var finished = document.getElementById("Finished").value;
+
+            //get the table by ID
+            var tabelle = document.getElementById( "tabelle" );
+
+            //count already existing rows in the table
+            var zeile = tabelle.getElementsByTagName( "tr" ).length;
+
+            //insert new row in the end (because we counted the number of existing rows and saved it in "zeile")
+            var tr = tabelle.insertRow( zeile );
+
+            //creat three new td elements for one row
+            var t = document.createElement( "td" );
+            var d = document.createElement( "td" );
+            var f = document.createElement( "td" );
+
+            //insert content from user into the <td> tags
+            t.innerHTML = todo;
+            d.innerHTML = deadline;
+            f.innerHTML = finished;
+
+            //insert as a child of the new created row
+            tr.appendChild( t);
+            tr.appendChild( d );
+            tr.appendChild( f );
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <a href="index.html" class="glyphicon glyphicon-triangle-left"> Zurück</a>
+        <h1>To Do hinzufügen</h1><br>
+      
+        <!-- table to list user input -->
+       <div id="main">
+        <table class="table table-striped" id="tabelle">
+                <thead>
+                     <tr>
+                         <th>To Do</th>
+                         <th>Deadline</th>
+                         <th>Finished</th>
+                      </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Beispielseite mit dem Bootstrap Framework anlegen</td>
+                        <td>25. April 2019</td>
+                        <td>0 %</td>
+                    </tr>
+                    <tr> 
+                        <td>Frühjahrsputz</td>
+                        <td>01. Mai 2019</td>
+                        <td>60 %</td>
+                    </tr>
+                    <tr> 
+                        <td>Prüfungen anmelden</td>
+                        <td>08. Mai 2019</td>
+                        <td>30 %</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <!-- form for user input -->
+            <form id="formID" action="" onsubmit="return submitEintrag();" method="POST">
+                To Do <input type="text" class="form-control" id="ToDo"><br>
+                Deadline <input type="text" class="form-control" id="Deadline"><br>
+                Finished <input type="text" class="form-control" id="Finished"><br><br>
+                <input type="button" class="btn btn-success" onclick="submitEintrag()" value="Absenden">
+            </form>
+    </div>
+</body>
+</html>
