@@ -1,58 +1,29 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>To Do Tracker Übersicht</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <style>
-
-        #main{
-            position: relative;
-            width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h1{
-            text-align: center;
-        }
-
-        a {
-            border:darkgrey solid 1px;
-            width:200px;
-            display: block;
-            text-decoration: none;
-            margin: 30px auto;
-        }
-
-        img {
-
-            height: 194px;
-        }
-
-        h4 {
-            text-align: center;
-            color: black;
-            margin : 0;
-        }
-
-    </style>
 </head>
-
-<h1> To Do Tracker </h1>
 
 <body>
     <div id="main">
-        <table class="table table-striped" id="tabelle">
+        <h1> To Do Tracker </h1><br>
+         <ul class="nav nav-pills">
+            <li role="presentation" class="active"><a href="add.html">Add</a></li>
+            <li role="presentation"><a href="impressum.html">Impressum</a></li>
+        </ul>
+
+        <div id="main">
+        <table class="table table-striped">
                 <thead>
                      <tr>
-                         <th>To Do</th>
+                         <th>Task</th>
                          <th>Deadline</th>
                          <th>Finished</th>
+                         <th>Edit</th>
+                         <th>Delete</th>
                       </tr>
                 </thead>
                 <tbody>
@@ -60,20 +31,28 @@
                         <td>Beispielseite mit dem Bootstrap Framework anlegen</td>
                         <td>25. April 2019</td>
                         <td>0 %</td>
+                        <td><button type="button" class="btn btn-success">edit</button></td>
+                        <td><button type="button" class="btn btn-danger">delete</button></td>
                     </tr>
                     <tr> 
                         <td>Frühjahrsputz</td>
                         <td>01. Mai 2019</td>
                         <td>60 %</td>
+                        <td><button type="button" class="btn btn-success">edit</button></td>
+                        <td><button type="button" class="btn btn-danger">delete</button></td>
                     </tr>
                     <tr> 
                         <td>Prüfungen anmelden</td>
                         <td>08. Mai 2019</td>
                         <td>30 %</td>
+                        <td><button type="button" class="btn btn-success">edit</button></td>
+                        <td><button type="button" class="btn btn-danger">delete</button></td>
                     </tr>
                 </tbody>
             </table>
-        <a href="add.html" >To Do hinzufügen</a>
+        </div>
+    </div>
+
     </div>
 </body>
 <html>
