@@ -1,0 +1,11 @@
+.container {
+    width: 80%;
+    max-width: 1260px;
+    min-width: 780px;
+}
+
+.form {
+    width: 60%;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}

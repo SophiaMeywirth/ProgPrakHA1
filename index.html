@@ -2,57 +2,66 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>To Do Tracker Übersicht</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>To Do Tracker Index</title>
+
+    <!-- Bootstrap CSS latest version-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="main">
+    <div class="container">
+
+    <!-- header -->
         <h1> To Do Tracker </h1><br>
          <ul class="nav nav-pills">
-            <li role="presentation" class="active"><a href="add.html">Add</a></li>
-            <li role="presentation"><a href="impressum.html">Impressum</a></li>
+            <li class="nav-item">
+                <a class="nav-link active" href="add.html">Add</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="impressum.html">Impressum</a>
+            </li>
         </ul>
 
-        <div id="main">
+    <!-- tabelle -->
         <table class="table table-striped">
                 <thead>
-                     <tr>
-                         <th>Task</th>
-                         <th>Deadline</th>
-                         <th>Finished</th>
-                         <th>Edit</th>
-                         <th>Delete</th>
-                      </tr>
+                    <tr>
+                        <th>Task</th>
+                        <th>Deadline</th>
+                        <th>Finished</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Beispielseite mit dem Bootstrap Framework anlegen</td>
                         <td>25. April 2019</td>
                         <td>0 %</td>
-                        <td><button type="button" class="btn btn-success">edit</button></td>
+                        <td><a href="edit.html" class="btn btn-success">edit</a></td>
                         <td><button type="button" class="btn btn-danger">delete</button></td>
                     </tr>
                     <tr> 
                         <td>Frühjahrsputz</td>
                         <td>01. Mai 2019</td>
                         <td>60 %</td>
-                        <td><button type="button" class="btn btn-success">edit</button></td>
+                        <td><a href="edit.html" class="btn btn-success">edit</a></td>
                         <td><button type="button" class="btn btn-danger">delete</button></td>
                     </tr>
                     <tr> 
                         <td>Prüfungen anmelden</td>
                         <td>08. Mai 2019</td>
                         <td>30 %</td>
-                        <td><button type="button" class="btn btn-success">edit</button></td>
+                        <td><a href="edit.html" class="btn btn-success">edit</a></td>
                         <td><button type="button" class="btn btn-danger">delete</button></td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
 
-    </div>
+        </div>
 </body>
 <html>
